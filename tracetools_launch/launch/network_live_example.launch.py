@@ -25,6 +25,9 @@ def generate_launch_description():
     return LaunchDescription([
         Trace(
             session_name='another-trace-session',
+            base_path='net://10.230.51.194', 
+            live=True,
+            timer_interval=1000000
         ),
         Node(
             package='test_tracetools',

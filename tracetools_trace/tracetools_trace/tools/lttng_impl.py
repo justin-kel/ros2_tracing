@@ -135,6 +135,8 @@ def setup(
     *,
     session_name: str,
     base_path: str,
+    live: bool,
+    timer_interval: int,
     append_trace: bool = False,
     ros_events: Union[List[str], Set[str]] = DEFAULT_EVENTS_ROS,
     kernel_events: Union[List[str], Set[str]] = [],
@@ -230,6 +232,8 @@ def setup(
     _create_session(
         session_name=session_name,
         full_path=full_path,
+        live=live,
+        timer_interval=timer_interval
     )
 
     # Enable channel, events, and contexts for each domain
@@ -368,6 +372,8 @@ def _create_session(
     *,
     session_name: str,
     full_path: str,
+    live: bool,
+    timer_interval: int
 ) -> None:
     """
     Create session from name and full directory path, and check for errors.
@@ -378,18 +384,26 @@ def _create_session(
     :param session_name: the name of the session
     :param full_path: the full path to the main directory to write trace data to
     """
-    result = lttngpy.lttng_create_session(
-        session_name=session_name,
-        url=full_path,
-    )
+    if live:
+        create_session_func = lttngpy.lttng_create_session_live
+        print(session_name)
+        print(full_path)
+        print(timer_interval)
+        kwargs = {'session_name': session_name, 'url': full_path, 'timer_interval': timer_interval}
+    else:
+        create_session_func = lttngpy.lttng_create_session
+        kwargs = {'session_name': session_name, 'url': full_path}
+
+    # Attempt to create the session
+    result = create_session_func(**kwargs)
+
+    # If session already exists, destroy and retry
     if -lttngpy.LTTNG_ERR_EXIST_SESS.value == result:
-        # Sessions may persist if there was an error previously, so if it already exists, just
-        # destroy it and try again
         destroy(session_name=session_name)
-        result = lttngpy.lttng_create_session(
-            session_name=session_name,
-            url=full_path,
-        )
+        result = create_session_func(**kwargs)
+
+    return result
+            
     if result < 0:
         raise RuntimeError(f'session creation failed: {lttngpy.lttng_strerror(result)}')
 

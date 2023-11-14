@@ -66,6 +66,15 @@ PYBIND11_MODULE(_lttngpy_pybind11, m) {
     py::kw_only(),
     py::arg("session_name"),
     py::arg("url"));
+
+  m.def(
+      "lttng_create_session_live",
+      &lttng_create_session_live,
+      "Create a session exclusively used for live reading.",
+      py::arg("session_name"),
+      py::arg("url"),
+      py::arg("timer_interval") = 1000000);
+
   m.def(
     "lttng_destroy_session",
     &lttng_destroy_session,
