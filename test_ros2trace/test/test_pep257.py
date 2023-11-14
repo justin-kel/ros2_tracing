@@ -1,4 +1,4 @@
-# Copyright 2019 Robert Bosch GmbH
+# Copyright 2017 Open Source Robotics Foundation, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,23 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-"""Stub version of the interface for tracing with LTTng."""
+from ament_pep257.main import main
+import pytest
 
 
-ERROR_MESSAGE = 'LTTng Python bindings not available, but still tried to use them'
-
-
-def setup(*args, **kwargs) -> None:
-    raise RuntimeError(ERROR_MESSAGE)
-
-
-def start(*args, **kwargs) -> None:
-    raise RuntimeError(ERROR_MESSAGE)
-
-
-def stop(*args, **kwargs) -> None:
-    raise RuntimeError(ERROR_MESSAGE)
-
-
-def destroy(*args, **kwargs) -> None:
-    raise RuntimeError(ERROR_MESSAGE)
+@pytest.mark.linter
+@pytest.mark.pep257
+def test_pep257():
+    rc = main(argv=[])
+    assert rc == 0, 'Found code style errors / warnings'
