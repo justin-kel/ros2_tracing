@@ -109,6 +109,8 @@ class Trace(Action):
         session_name: SomeSubstitutionsType,
         append_timestamp: bool = False,
         base_path: Optional[SomeSubstitutionsType] = None,
+        live: bool = False,
+        timer_interval: int = 1000000,
         append_trace: bool = False,
         events_ust: Iterable[SomeSubstitutionsType] = names.DEFAULT_EVENTS_ROS,
         events_kernel: Iterable[SomeSubstitutionsType] = [],
@@ -117,6 +119,8 @@ class Trace(Action):
             = names.DEFAULT_CONTEXT,
         subbuffer_size_ust: int = 8 * 4096,
         subbuffer_size_kernel: int = 32 * 4096,
+        
+
         **kwargs,
     ) -> None:
         """
@@ -136,6 +140,9 @@ class Trace(Action):
         :param append_timestamp: whether to append timestamp to the session name
         :param base_path: the path to the base directory in which to create the session directory,
             or `None` for default
+        :param live: whether or not to create a live tracing session
+        :param timer_interval: timer interval for live tracing session, 
+            it refers to the maximum time (in µs) you can wait for the data to be flushed (sent to the connected LTTng relay daemon)
         :param append_trace: whether to append to the trace directory if it already exists,
             otherwise an error is reported
         :param events_ust: the list of ROS UST events to enable
@@ -155,6 +162,8 @@ class Trace(Action):
         self.__session_name = normalize_to_list_of_substitutions(session_name)
         self.__base_path = base_path \
             if base_path is None else normalize_to_list_of_substitutions(base_path)
+        self.__live = live
+        self.__timer_interval = timer_interval
         self.__append_trace = append_trace
         self.__trace_directory = None
         self.__events_ust = [normalize_to_list_of_substitutions(x) for x in events_ust]
@@ -177,7 +186,15 @@ class Trace(Action):
     @property
     def base_path(self):
         return self.__base_path
-
+    
+    @property
+    def live(self):
+        return self.__live   
+    
+    @property
+    def timer_interval(self):
+        return self.__timer_interval
+    
     @property
     def append_trace(self):
         return self.__append_trace
@@ -280,6 +297,14 @@ class Trace(Action):
         base_path = entity.get_attr('base-path', optional=True)
         if base_path:
             kwargs['base_path'] = parser.parse_substitution(base_path)
+        live = entity.get_attr(
+            'live', data_type=bool, optional=True, can_be_str=False)
+        if live is not None:
+            kwargs['live'] = live   
+        timer_interval = entity.get_attr(
+            'timer-interval', data_type=int, optional=True, can_be_str=False)
+        if timer_interval is not None:
+            kwargs['timer_interval'] = timer_interval   
         append_trace = entity.get_attr(
             'append-trace', data_type=bool, optional=True, can_be_str=False)
         if append_trace is not None:
@@ -414,6 +439,8 @@ class Trace(Action):
             self.__trace_directory = lttng.lttng_init(
                 session_name=self.__session_name,
                 base_path=self.__base_path,
+                live=self.__live,
+                timer_interval=self.__timer_interval,
                 append_trace=self.__append_trace,
                 ros_events=self.__events_ust,
                 kernel_events=self.__events_kernel,
@@ -449,6 +476,8 @@ class Trace(Action):
             'Trace('
             f'session_name={self.__session_name}, '
             f'base_path={self.__base_path}, '
+            f'live={self.__live}, '
+            f'timer_interval={self.__timer_interval},'
             f'append_trace={self.__append_trace}, '
             f'trace_directory={self.__trace_directory}, '
             f'events_ust={self.__events_ust}, '
