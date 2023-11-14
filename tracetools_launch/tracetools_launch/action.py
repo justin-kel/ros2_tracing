@@ -109,16 +109,18 @@ class Trace(Action):
         session_name: SomeSubstitutionsType,
         append_timestamp: bool = False,
         base_path: Optional[SomeSubstitutionsType] = None,
+        live: bool = False,
+        timer_interval: int = 1000000,
+        append_trace: bool = False,
         events_ust: Iterable[SomeSubstitutionsType] = names.DEFAULT_EVENTS_ROS,
         events_kernel: Iterable[SomeSubstitutionsType] = [],
         context_fields:
             Union[Iterable[SomeSubstitutionsType], Dict[str, Iterable[SomeSubstitutionsType]]]
             = names.DEFAULT_CONTEXT,
-        context_names:
-            Optional[
-                Union[Iterable[SomeSubstitutionsType], Dict[str, Iterable[SomeSubstitutionsType]]]
-            ]
-            = None,
+        subbuffer_size_ust: int = 8 * 4096,
+        subbuffer_size_kernel: int = 32 * 4096,
+        
+
         **kwargs,
     ) -> None:
         """
@@ -137,14 +139,22 @@ class Trace(Action):
         :param session_name: the name of the tracing session
         :param append_timestamp: whether to append timestamp to the session name
         :param base_path: the path to the base directory in which to create the session directory,
-        or `None` for default
+            or `None` for default
+        :param live: whether or not to create a live tracing session
+        :param timer_interval: timer interval for live tracing session, 
+            it refers to the maximum time (in µs) you can wait for the data to be flushed (sent to the connected LTTng relay daemon)
+        :param append_trace: whether to append to the trace directory if it already exists,
+            otherwise an error is reported
         :param events_ust: the list of ROS UST events to enable
         :param events_kernel: the list of kernel events to enable
         :param context_fields: the names of context fields to enable
             if it's a list or a set, the context fields are enabled for both kernel and userspace;
             if it's a dictionary: { domain type string -> context fields list }
                 with the domain type string being either 'kernel' or 'userspace'
-        :param context_names: DEPRECATED, use context_fields instead
+        :param subbuffer_size_ust: the size of the subbuffers (defaults to 8 times the usual page
+            size)
+        :param subbuffer_size_kernel: the size of the subbuffers (defaults to 32 times the usual
+            page size)
         """
         super().__init__(**kwargs)
         self.__logger = logging.get_logger(__name__)
@@ -152,14 +162,12 @@ class Trace(Action):
         self.__session_name = normalize_to_list_of_substitutions(session_name)
         self.__base_path = base_path \
             if base_path is None else normalize_to_list_of_substitutions(base_path)
+        self.__live = live
+        self.__timer_interval = timer_interval
+        self.__append_trace = append_trace
         self.__trace_directory = None
         self.__events_ust = [normalize_to_list_of_substitutions(x) for x in events_ust]
         self.__events_kernel = [normalize_to_list_of_substitutions(x) for x in events_kernel]
-        # Use value from deprecated param if it is provided
-        # TODO(christophebedard) remove context_names param in Rolling after Humble release
-        if context_names is not None:
-            context_fields = context_names
-            self.__logger.warning('context_names parameter is deprecated, use context_fields')
         self.__context_fields = \
             {
                 domain: [normalize_to_list_of_substitutions(field) for field in fields]
@@ -168,6 +176,8 @@ class Trace(Action):
             if isinstance(context_fields, dict) \
             else [normalize_to_list_of_substitutions(field) for field in context_fields]
         self.__ld_preload_actions: List[LdPreload] = []
+        self.__subbuffer_size_ust = subbuffer_size_ust
+        self.__subbuffer_size_kernel = subbuffer_size_kernel
 
     @property
     def session_name(self):
@@ -176,6 +186,18 @@ class Trace(Action):
     @property
     def base_path(self):
         return self.__base_path
+    
+    @property
+    def live(self):
+        return self.__live   
+    
+    @property
+    def timer_interval(self):
+        return self.__timer_interval
+    
+    @property
+    def append_trace(self):
+        return self.__append_trace
 
     @property
     def trace_directory(self):
@@ -194,9 +216,12 @@ class Trace(Action):
         return self.__context_fields
 
     @property
-    def context_names(self):
-        self.__logger.warning('context_names parameter is deprecated, use context_fields')
-        return self.__context_fields
+    def subbuffer_size_ust(self):
+        return self.__subbuffer_size_ust
+
+    @property
+    def subbuffer_size_kernel(self):
+        return self.__subbuffer_size_kernel
 
     @classmethod
     def _parse_cmdline(
@@ -272,6 +297,18 @@ class Trace(Action):
         base_path = entity.get_attr('base-path', optional=True)
         if base_path:
             kwargs['base_path'] = parser.parse_substitution(base_path)
+        live = entity.get_attr(
+            'live', data_type=bool, optional=True, can_be_str=False)
+        if live is not None:
+            kwargs['live'] = live   
+        timer_interval = entity.get_attr(
+            'timer-interval', data_type=int, optional=True, can_be_str=False)
+        if timer_interval is not None:
+            kwargs['timer_interval'] = timer_interval   
+        append_trace = entity.get_attr(
+            'append-trace', data_type=bool, optional=True, can_be_str=False)
+        if append_trace is not None:
+            kwargs['append_trace'] = append_trace
         # Make sure to handle empty strings and replace with empty lists,
         # otherwise an empty string enables all events
         events_ust = entity.get_attr('events-ust', optional=True)
@@ -286,10 +323,14 @@ class Trace(Action):
         if context_fields is not None:
             kwargs['context_fields'] = cls._parse_cmdline(context_fields, parser) \
                 if context_fields else []
-        context_names = entity.get_attr('context-names', optional=True)
-        if context_names is not None:
-            kwargs['context_names'] = cls._parse_cmdline(context_names, parser) \
-                if context_names else []
+        subbuffer_size_ust = entity.get_attr(
+            'subbuffer-size-ust', data_type=int, optional=True, can_be_str=False)
+        if subbuffer_size_ust is not None:
+            kwargs['subbuffer_size_ust'] = subbuffer_size_ust
+        subbuffer_size_kernel = entity.get_attr(
+            'subbuffer-size-kernel', data_type=int, optional=True, can_be_str=False)
+        if subbuffer_size_kernel is not None:
+            kwargs['subbuffer_size_kernel'] = subbuffer_size_kernel
 
         return cls, kwargs
 
@@ -394,21 +435,37 @@ class Trace(Action):
         return self.__ld_preload_actions
 
     def _setup(self) -> bool:
-        self.__trace_directory = lttng.lttng_init(
-            session_name=self.__session_name,
-            base_path=self.__base_path,
-            ros_events=self.__events_ust,
-            kernel_events=self.__events_kernel,
-            context_fields=self.__context_fields,
-        )
-        if self.__trace_directory is None:
+        try:
+            self.__trace_directory = lttng.lttng_init(
+                session_name=self.__session_name,
+                base_path=self.__base_path,
+                live=self.__live,
+                timer_interval=self.__timer_interval,
+                append_trace=self.__append_trace,
+                ros_events=self.__events_ust,
+                kernel_events=self.__events_kernel,
+                context_fields=self.__context_fields,
+                subbuffer_size_ust=self.__subbuffer_size_ust,
+                subbuffer_size_kernel=self.__subbuffer_size_kernel,
+            )
+            if self.__trace_directory is None:
+                return False
+            self.__logger.info(f'Writing tracing session to: {self.__trace_directory}')
+            self.__logger.debug(f'UST events: {self.__events_ust}')
+            self.__logger.debug(f'Kernel events: {self.__events_kernel}')
+            self.__logger.debug(f'Context fields: {self.__context_fields}')
+            self.__logger.debug(f'LD_PRELOAD: {self.__ld_preload_actions}')
+            self.__logger.debug(f'UST subbuffer size: {self.__subbuffer_size_ust}')
+            self.__logger.debug(f'Kernel subbuffer size: {self.__subbuffer_size_kernel}')
+            return True
+        except RuntimeError as e:
+            self.__logger.error(str(e))
+            # Make sure to clean up tracing session
+            lttng.lttng_fini(
+                session_name=self.__session_name,
+                ignore_error=True,
+            )
             return False
-        self.__logger.info(f'Writing tracing session to: {self.__trace_directory}')
-        self.__logger.debug(f'UST events: {self.__events_ust}')
-        self.__logger.debug(f'Kernel events: {self.__events_kernel}')
-        self.__logger.debug(f'Context fields: {self.__context_fields}')
-        self.__logger.debug(f'LD_PRELOAD: {self.__ld_preload_actions}')
-        return True
 
     def _destroy(self, event: Event, context: LaunchContext) -> None:
         self.__logger.debug(f'Finalizing tracing session: {self.__session_name}')
@@ -419,9 +476,14 @@ class Trace(Action):
             'Trace('
             f'session_name={self.__session_name}, '
             f'base_path={self.__base_path}, '
+            f'live={self.__live}, '
+            f'timer_interval={self.__timer_interval},'
+            f'append_trace={self.__append_trace}, '
             f'trace_directory={self.__trace_directory}, '
             f'events_ust={self.__events_ust}, '
             f'events_kernel={self.__events_kernel}, '
             f'context_fields={self.__context_fields}, '
-            f'ld_preload_actions={self.__ld_preload_actions})'
+            f'ld_preload_actions={self.__ld_preload_actions}, '
+            f'subbuffer_size_ust={self.__subbuffer_size_ust}, '
+            f'subbuffer_size_kernel={self.__subbuffer_size_kernel})'
         )

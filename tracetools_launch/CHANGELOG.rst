@@ -2,9 +2,42 @@
 Changelog for package tracetools_launch
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.1.1 (2022-11-07)
+7.1.0 (2023-08-23)
 ------------------
-* Merge branch 'clalancette/release-4.1.0' into 'master'
+
+7.0.0 (2023-06-09)
+------------------
+
+6.4.1 (2023-05-11)
+------------------
+
+6.4.0 (2023-04-28)
+------------------
+
+6.3.0 (2023-04-18)
+------------------
+
+6.2.0 (2023-04-18)
+------------------
+* Error out if trace already exists unless 'append' option is used (`#58 <https://github.com/ros2/ros2_tracing/issues/58>`_)
+* Improve 'ros2 trace' command error handling & add end-to-end tests (`#54 <https://github.com/ros2/ros2_tracing/issues/54>`_)
+* Make subbuffer size configurable with Trace action (`#51 <https://github.com/ros2/ros2_tracing/issues/51>`_)
+* Contributors: Christophe Bedard, Christopher Wecht
+
+6.1.0 (2023-04-13)
+------------------
+
+6.0.0 (2023-04-12)
+------------------
+* Enable document generation using rosdoc2 for ament_python pkgs (`#50 <https://github.com/ros2/ros2_tracing/issues/50>`_)
+* Contributors: Yadu
+
+5.1.0 (2023-03-02)
+------------------
+
+5.0.0 (2023-02-14)
+------------------
+* Remove deprecated context_names parameter (`#38 <https://github.com/ros2/ros2_tracing/issues/38>`_)
 * Contributors: Christophe Bedard
 
 4.0.0 (2022-01-20)
