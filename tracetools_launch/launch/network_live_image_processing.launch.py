@@ -24,19 +24,19 @@ def generate_launch_description():
 
     return LaunchDescription([
         Trace(
-            session_name='another-trace-session',
+            session_name='image-tracing-session',
             base_path='net://192.168.0.105', 
             live=True,
             timer_interval=1000000
         ),
         Node(
-            package='test_tracetools',
-            executable='test_ping',
+            package='compressed_image_tools',
+            executable='reconfigurable_compressed_image_publisher',
             output='screen',
         ),
         Node(
-            package='test_tracetools',
-            executable='test_pong',
+            package='yolov5_ros',
+            executable='yolov5_ros_compressed',
             output='screen',
         ),
     ])
