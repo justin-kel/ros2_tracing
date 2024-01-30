@@ -1,0 +1,7 @@
+In file included from [01m[K/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/lttngpy/test/test_context_perf.cpp:15[m[K:
+/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h: In instantiation of ‘[01m[Ktesting::AssertionResult testing::internal::CmpHelperEQ(const char*, const char*, const T1&, const T2&) [with T1 = int; T2 = long unsigned int][m[K’:
+[01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:1554:23:[m[K   required from ‘[01m[Kstatic testing::AssertionResult testing::internal::EqHelper::Compare(const char*, const char*, const T1&, const T2&) [with T1 = int; T2 = long unsigned int; typename std::enable_if<((! std::is_integral<_Tp>::value) || (! std::is_pointer<_Dp>::value))>::type* <anonymous> = 0][m[K’
+[01m[K/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/lttngpy/test/test_context_perf.cpp:57:3:[m[K   required from here
+[01m[K/opt/ros/humble/src/gtest_vendor/include/gtest/gtest.h:1527:11:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kconst int[m[K’ and ‘[01m[Kconst long unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+ 1527 |   if ([01;35m[Klhs == rhs[m[K) {
+      |       [01;35m[K~~~~^~~~~~[m[K

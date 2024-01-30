@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/test_context_lttng.dir/test/test_context_lttng.cpp.o CMakeFiles/test_context_lttng.dir/src/lttngpy/context_lttng.cpp.o -o test_context_lttng  gtest/libgtest_main.a gtest/libgtest.a -llttng-ctl -pthread 

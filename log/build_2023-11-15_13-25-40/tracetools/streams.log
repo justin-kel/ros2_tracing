@@ -1,0 +1,44 @@
+[0.378s] Invoking command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --build /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools -- -j16 -l16
+[0.428s] [ 28%] Built target tracetools
+[0.428s] [ 42%] Built target gtest_main
+[0.428s] [ 57%] Built target gtest
+[0.439s] [ 71%] Built target tracetools_status
+[0.450s] [ 85%] Built target status
+[0.454s] [100%] Built target test_status
+[0.463s] Invoked command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --build /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools -- -j16 -l16
+[0.564s] Invoking command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --install /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools
+[0.590s] -- Install configuration: ""
+[0.591s] -- Execute custom install script
+[0.591s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/environment/library_path.sh
+[0.591s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/environment/library_path.dsv
+[0.592s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/lib/libtracetools_status.so
+[0.592s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/lib/tracetools/status
+[0.593s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/include/tracetools/tracetools/config.h
+[0.593s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/include/tracetools/tracetools/status.h
+[0.593s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/include/tracetools/tracetools/tp_call.h
+[0.593s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/include/tracetools/tracetools/tracetools.h
+[0.593s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/include/tracetools/tracetools/utils.hpp
+[0.594s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/include/tracetools/tracetools/visibility_control.hpp
+[0.594s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/ament_index/resource_index/package_run_dependencies/tracetools
+[0.594s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/ament_index/resource_index/parent_prefix_path/tracetools
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/environment/ament_prefix_path.sh
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/environment/ament_prefix_path.dsv
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/environment/path.sh
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/environment/path.dsv
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/local_setup.bash
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/local_setup.sh
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/local_setup.zsh
+[0.595s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/local_setup.dsv
+[0.595s] -- Symlinking: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/package.dsv
+[0.599s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/ament_index/resource_index/packages/tracetools
+[0.599s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/ament_cmake_export_targets-extras.cmake
+[0.600s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.600s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/ament_cmake_export_libraries-extras.cmake
+[0.600s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/ament_cmake_export_link_flags-extras.cmake
+[0.600s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/tracetoolsConfig.cmake
+[0.600s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/tracetoolsConfig-version.cmake
+[0.601s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/package.xml
+[0.601s] -- Up-to-date: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/lib/libtracetools.so
+[0.601s] -- Up-to-date: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/tracetools_exportExport.cmake
+[0.601s] -- Up-to-date: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools/share/tracetools/cmake/tracetools_exportExport-noconfig.cmake
+[0.607s] Invoked command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --install /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools

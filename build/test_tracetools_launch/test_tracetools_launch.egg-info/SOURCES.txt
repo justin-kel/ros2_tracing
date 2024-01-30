@@ -1,0 +1,10 @@
+package.xml
+setup.cfg
+setup.py
+resource/test_tracetools_launch
+test_tracetools_launch/__init__.py
+test_tracetools_launch.egg-info/PKG-INFO
+test_tracetools_launch.egg-info/SOURCES.txt
+test_tracetools_launch.egg-info/dependency_links.txt
+test_tracetools_launch.egg-info/requires.txt
+test_tracetools_launch.egg-info/top_level.txt

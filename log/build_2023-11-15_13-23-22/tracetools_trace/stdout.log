@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating tracetools_trace.egg-info
+writing tracetools_trace.egg-info/PKG-INFO
+writing dependency_links to tracetools_trace.egg-info/dependency_links.txt
+writing entry points to tracetools_trace.egg-info/entry_points.txt
+writing requirements to tracetools_trace.egg-info/requires.txt
+writing top-level names to tracetools_trace.egg-info/top_level.txt
+writing manifest file 'tracetools_trace.egg-info/SOURCES.txt'
+reading manifest file 'tracetools_trace.egg-info/SOURCES.txt'
+writing manifest file 'tracetools_trace.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/lib/python3.10/site-packages/tracetools-trace.egg-link (link to .)
+Installing trace script to /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/lib/tracetools_trace
+
+Installed /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_trace
+running install_data
+copying package.xml -> /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/share/tracetools_trace
+creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/share/ament_index
+creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/share/ament_index/resource_index
+creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/share/ament_index/resource_index/packages
+copying resource/tracetools_trace -> /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/share/ament_index/resource_index/packages

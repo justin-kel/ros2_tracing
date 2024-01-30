@@ -1,0 +1,38 @@
+[  8%] Built target gtest_main
+[ 16%] Built target gtest
+[ 25%] Built target test_pong
+[ 33%] Built target test_intra
+[ 41%] Built target test_service_pong
+[ 50%] Built target test_publisher
+[ 58%] Built target test_lifecycle_node
+[ 66%] Built target test_ping
+[ 83%] Built target test_timer
+[ 83%] Built target test_lifecycle_client
+[ 91%] Built target test_service_ping
+[100%] Built target test_utils
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_intra
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_lifecycle_node
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_lifecycle_client
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_ping
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_pong
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_publisher
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_service_ping
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_service_pong
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/lib/test_tracetools/test_timer
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/ament_index/resource_index/package_run_dependencies/test_tracetools
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/ament_index/resource_index/parent_prefix_path/test_tracetools
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/environment/path.sh
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/environment/path.dsv
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/local_setup.bash
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/local_setup.sh
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/local_setup.zsh
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/local_setup.dsv
+-- Symlinking: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/package.dsv
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/ament_index/resource_index/packages/test_tracetools
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/cmake/test_tracetoolsConfig.cmake
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/cmake/test_tracetoolsConfig-version.cmake
+-- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/test_tracetools/share/test_tracetools/package.xml

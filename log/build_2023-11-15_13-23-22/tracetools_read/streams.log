@@ -1,0 +1,48 @@
+[1.096s] Invoking command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read': PYTHONPATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read/prefix_override:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read/build --no-deps install_data
+[1.454s] running develop
+[1.455s] /home/justin/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.455s] !!
+[1.455s] 
+[1.455s]         ********************************************************************************
+[1.455s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.455s]         Instead, use pypa/build, pypa/installer or other
+[1.455s]         standards-based tools.
+[1.455s] 
+[1.455s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.455s]         ********************************************************************************
+[1.455s] 
+[1.455s] !!
+[1.455s]   easy_install.initialize_options(self)
+[1.490s] /home/justin/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.490s] !!
+[1.490s] 
+[1.490s]         ********************************************************************************
+[1.491s]         Please avoid running ``setup.py`` directly.
+[1.491s]         Instead, use pypa/build, pypa/installer or other
+[1.491s]         standards-based tools.
+[1.491s] 
+[1.491s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.491s]         ********************************************************************************
+[1.491s] 
+[1.491s] !!
+[1.491s]   self.initialize_options()
+[1.722s] running egg_info
+[1.722s] creating tracetools_read.egg-info
+[1.740s] writing tracetools_read.egg-info/PKG-INFO
+[1.740s] writing dependency_links to tracetools_read.egg-info/dependency_links.txt
+[1.740s] writing requirements to tracetools_read.egg-info/requires.txt
+[1.740s] writing top-level names to tracetools_read.egg-info/top_level.txt
+[1.740s] writing manifest file 'tracetools_read.egg-info/SOURCES.txt'
+[1.778s] reading manifest file 'tracetools_read.egg-info/SOURCES.txt'
+[1.778s] writing manifest file 'tracetools_read.egg-info/SOURCES.txt'
+[1.799s] running build_ext
+[1.799s] Creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/lib/python3.10/site-packages/tracetools-read.egg-link (link to .)
+[1.799s] 
+[1.799s] Installed /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read
+[1.799s] running install_data
+[1.800s] copying package.xml -> /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/share/tracetools_read
+[1.800s] creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/share/ament_index
+[1.800s] creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/share/ament_index/resource_index
+[1.800s] creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/share/ament_index/resource_index/packages
+[1.800s] copying resource/tracetools_read -> /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/share/ament_index/resource_index/packages
+[1.840s] Invoked command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read' returned '0': PYTHONPATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read/prefix_override:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_read/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_read/build --no-deps install_data

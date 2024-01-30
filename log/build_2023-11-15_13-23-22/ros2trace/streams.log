@@ -1,0 +1,49 @@
+[1.273s] Invoking command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace': AMENT_PREFIX_PATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace/prefix_override:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/lib/python3.10/site-packages:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/lib/python3.10/site-packages:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace/build --no-deps install_data
+[1.607s] running develop
+[1.607s] /home/justin/.local/lib/python3.10/site-packages/setuptools/command/develop.py:40: EasyInstallDeprecationWarning: easy_install command is deprecated.
+[1.607s] !!
+[1.607s] 
+[1.607s]         ********************************************************************************
+[1.607s]         Please avoid running ``setup.py`` and ``easy_install``.
+[1.607s]         Instead, use pypa/build, pypa/installer or other
+[1.608s]         standards-based tools.
+[1.608s] 
+[1.608s]         See https://github.com/pypa/setuptools/issues/917 for details.
+[1.608s]         ********************************************************************************
+[1.608s] 
+[1.608s] !!
+[1.608s]   easy_install.initialize_options(self)
+[1.644s] /home/justin/.local/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+[1.644s] !!
+[1.644s] 
+[1.644s]         ********************************************************************************
+[1.644s]         Please avoid running ``setup.py`` directly.
+[1.644s]         Instead, use pypa/build, pypa/installer or other
+[1.644s]         standards-based tools.
+[1.645s] 
+[1.645s]         See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+[1.645s]         ********************************************************************************
+[1.645s] 
+[1.645s] !!
+[1.645s]   self.initialize_options()
+[1.890s] running egg_info
+[1.890s] creating ros2trace.egg-info
+[1.908s] writing ros2trace.egg-info/PKG-INFO
+[1.909s] writing dependency_links to ros2trace.egg-info/dependency_links.txt
+[1.909s] writing entry points to ros2trace.egg-info/entry_points.txt
+[1.909s] writing requirements to ros2trace.egg-info/requires.txt
+[1.909s] writing top-level names to ros2trace.egg-info/top_level.txt
+[1.909s] writing manifest file 'ros2trace.egg-info/SOURCES.txt'
+[1.949s] reading manifest file 'ros2trace.egg-info/SOURCES.txt'
+[1.949s] writing manifest file 'ros2trace.egg-info/SOURCES.txt'
+[1.972s] running build_ext
+[1.972s] Creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/lib/python3.10/site-packages/ros2trace.egg-link (link to .)
+[1.973s] 
+[1.973s] Installed /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace
+[1.973s] running install_data
+[1.973s] copying package.xml -> /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/share/ros2trace
+[1.973s] creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/share/ament_index
+[1.973s] creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/share/ament_index/resource_index
+[1.974s] creating /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/share/ament_index/resource_index/packages
+[1.974s] copying resource/ros2trace -> /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/share/ament_index/resource_index/packages
+[2.195s] Invoked command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace' returned '0': AMENT_PREFIX_PATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy:${CMAKE_PREFIX_PATH} PYTHONPATH=/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace/prefix_override:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/ros2trace/lib/python3.10/site-packages:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/tracetools_trace/lib/python3.10/site-packages:/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/ros2trace/build --no-deps install_data

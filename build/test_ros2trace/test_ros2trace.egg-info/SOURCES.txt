@@ -1,0 +1,10 @@
+package.xml
+setup.py
+resource/test_ros2trace
+test_ros2trace/__init__.py
+test_ros2trace.egg-info/PKG-INFO
+test_ros2trace.egg-info/SOURCES.txt
+test_ros2trace.egg-info/dependency_links.txt
+test_ros2trace.egg-info/requires.txt
+test_ros2trace.egg-info/top_level.txt
+test_ros2trace.egg-info/zip-safe

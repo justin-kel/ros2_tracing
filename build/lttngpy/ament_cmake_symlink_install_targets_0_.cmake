@@ -1,0 +1,1 @@
+ament_cmake_symlink_install_targets("TARGET_FILES" "/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy/_lttngpy_pybind11.cpython-310-x86_64-linux-gnu.so" "TARGETS" "_lttngpy_pybind11" "DESTINATION" "local/lib/python3.10/dist-packages/lttngpy")

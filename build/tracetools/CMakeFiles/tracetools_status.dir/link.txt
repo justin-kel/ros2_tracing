@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC -shared -Wl,-soname,libtracetools_status.so -o libtracetools_status.so CMakeFiles/tracetools_status.dir/src/status.c.o  -Wl,-rpath,/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/tracetools libtracetools.so -llttng-ust -llttng-ust-common -ldl -rdynamic 

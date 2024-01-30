@@ -1,0 +1,4 @@
+source;share/lttngpy/local_setup.bash
+source;share/lttngpy/local_setup.dsv
+source;share/lttngpy/local_setup.sh
+source;share/lttngpy/local_setup.zsh

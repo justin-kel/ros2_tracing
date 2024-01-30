@@ -1,0 +1,45 @@
+[0.271s] Invoking command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --build /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy -- -j16 -l16
+[0.544s] [  0%] Built target ament_cmake_python_symlink_lttngpy
+[0.544s] [  8%] Built target gtest_main
+[0.545s] [ 17%] Built target gtest
+[0.545s] [ 60%] Built target _lttngpy_pybind11
+[0.545s] [ 86%] Built target test_context_app
+[0.546s] [ 86%] Built target test_context_lttng
+[0.546s] [100%] Built target test_context_perf
+[0.546s] running egg_info
+[0.555s] writing lttngpy.egg-info/PKG-INFO
+[0.556s] writing dependency_links to lttngpy.egg-info/dependency_links.txt
+[0.556s] writing top-level names to lttngpy.egg-info/top_level.txt
+[0.611s] reading manifest file 'lttngpy.egg-info/SOURCES.txt'
+[0.612s] writing manifest file 'lttngpy.egg-info/SOURCES.txt'
+[0.633s] [100%] Built target ament_cmake_python_build_lttngpy_egg
+[0.642s] Invoked command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --build /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy -- -j16 -l16
+[0.735s] Invoking command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --install /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy
+[0.760s] -- Install configuration: ""
+[0.761s] -- Execute custom install script
+[0.761s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/environment/pythonpath.sh
+[0.761s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/environment/pythonpath.dsv
+[0.761s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy-7.1.0-py3.10.egg-info/PKG-INFO
+[0.761s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy-7.1.0-py3.10.egg-info/SOURCES.txt
+[0.762s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy-7.1.0-py3.10.egg-info/dependency_links.txt
+[0.762s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy-7.1.0-py3.10.egg-info/top_level.txt
+[0.762s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy/__init__.py
+[0.762s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy/impl.py
+[0.762s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy/_lttngpy_pybind11.cpython-310-x86_64-linux-gnu.so
+[0.762s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/ament_index/resource_index/package_run_dependencies/lttngpy
+[0.763s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/ament_index/resource_index/parent_prefix_path/lttngpy
+[0.763s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/environment/ament_prefix_path.sh
+[0.763s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/environment/ament_prefix_path.dsv
+[0.763s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/environment/path.sh
+[0.763s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/environment/path.dsv
+[0.764s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/local_setup.bash
+[0.764s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/local_setup.sh
+[0.764s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/local_setup.zsh
+[0.764s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/local_setup.dsv
+[0.764s] -- Symlinking: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/package.dsv
+[0.767s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/ament_index/resource_index/packages/lttngpy
+[0.767s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/cmake/lttngpyConfig.cmake
+[0.767s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/cmake/lttngpyConfig-version.cmake
+[0.767s] -- Up-to-date symlink: /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/share/lttngpy/package.xml
+[0.799s] Listing '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/install/lttngpy/local/lib/python3.10/dist-packages/lttngpy'...
+[0.861s] Invoked command in '/home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/justin/ros2_tracing_humble_demo_ws/install/yolov5_ros:/home/justin/ros2_tracing_humble_demo_ws/install/compressed_image_tools:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_test:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/ros2trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_trace:/home/justin/ros2_tracing_humble_demo_ws/install/tracetools_read:/home/justin/ros2_tracing_humble_demo_ws/install/test_tracetools_launch:/home/justin/ros2_tracing_humble_demo_ws/install/test_ros2trace:/opt/ros/humble /home/justin/.local/bin/cmake --install /home/justin/ros2_tracing_humble_demo_ws/src/ros2_tracing/build/lttngpy

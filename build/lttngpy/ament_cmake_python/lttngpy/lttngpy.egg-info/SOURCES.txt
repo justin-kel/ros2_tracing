@@ -1,0 +1,7 @@
+setup.py
+lttngpy/__init__.py
+lttngpy/impl.py
+lttngpy.egg-info/PKG-INFO
+lttngpy.egg-info/SOURCES.txt
+lttngpy.egg-info/dependency_links.txt
+lttngpy.egg-info/top_level.txt
