@@ -79,12 +79,12 @@ def init(
     *,
     session_name: str,
     base_path: Optional[str],
-    append_trace: bool,
+    #append_trace: bool,
     ros_events: List[str],
     kernel_events: List[str],
     context_fields: List[str],
     display_list: bool,
-    interactive: bool,
+    #interactive: bool,
 ) -> bool:
     """
     Init and start tracing.
@@ -118,21 +118,21 @@ def init(
         base_path=base_path,
     )
 
-    if interactive:
-        input('press enter to start...')
-    trace_directory = lttng.lttng_init(
-        session_name=session_name,
-        base_path=base_path,
-        append_trace=append_trace,
-        ros_events=ros_events,
-        kernel_events=kernel_events,
-        context_fields=context_fields,
-    )
-    if trace_directory is None:
-        return False
-    # Simple sanity check
-    assert trace_directory == full_session_path
-    return True
+    # if interactive:
+    #     input('press enter to start...')
+    # trace_directory = lttng.lttng_init(
+    #     session_name=session_name,
+    #     base_path=base_path,
+    #     append_trace=append_trace,
+    #     ros_events=ros_events,
+    #     kernel_events=kernel_events,
+    #     context_fields=context_fields,
+    # )
+    # if trace_directory is None:
+    #     return False
+    # # Simple sanity check
+    # assert trace_directory == full_session_path
+    # return True
 
 
 def fini(
@@ -210,12 +210,12 @@ def trace(args: argparse.Namespace) -> int:
         if not init(
             session_name=args.session_name,
             base_path=args.path,
-            append_trace=args.append_trace,
+            #append_trace=args.append_trace,
             ros_events=args.events_ust,
             kernel_events=args.events_kernel,
             context_fields=args.context_fields,
             display_list=args.list,
-            interactive=True,
+            #interactive=True,
         ):
             return 1
         fini(session_name=args.session_name)
@@ -238,12 +238,12 @@ def start(args: argparse.Namespace) -> int:
             not init(
                 session_name=args.session_name,
                 base_path=args.path,
-                append_trace=args.append_trace,
+                #append_trace=args.append_trace,
                 ros_events=args.events_ust,
                 kernel_events=args.events_kernel,
                 context_fields=args.context_fields,
                 display_list=args.list,
-                interactive=False,
+                #interactive=False,
             )
         )
     return _do_work_and_report_error(work, args.session_name, do_cleanup=True)
