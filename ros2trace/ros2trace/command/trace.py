@@ -34,6 +34,8 @@ class TraceCommand(CommandExtension):
             kernel_events=args.events_kernel,
             context_fields=args.context_fields,
             display_list=args.list,
+            live=args.live,
+            timer_interval=args.timer_interval
         ):
             return 1
         fini(

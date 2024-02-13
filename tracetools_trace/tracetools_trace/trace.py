@@ -84,6 +84,8 @@ def init(
     kernel_events: List[str],
     context_fields: List[str],
     display_list: bool,
+    live: bool,
+    timer_interval: int
     #interactive: bool,
 ) -> bool:
     """
@@ -104,6 +106,8 @@ def init(
     :param context_fields: list of context fields to enable
     :param display_list: whether to display list(s) of enabled events and context names
     :param interactive: whether to require user interaction to start tracing
+    :param live: whether to perform live tracing
+    :param timer_interval
     :return: True if successful, False otherwise
     """
     _display_info(
@@ -120,19 +124,22 @@ def init(
 
     # if interactive:
     #     input('press enter to start...')
-    # trace_directory = lttng.lttng_init(
-    #     session_name=session_name,
-    #     base_path=base_path,
-    #     append_trace=append_trace,
-    #     ros_events=ros_events,
-    #     kernel_events=kernel_events,
-    #     context_fields=context_fields,
-    # )
-    # if trace_directory is None:
-    #     return False
-    # # Simple sanity check
-    # assert trace_directory == full_session_path
-    # return True
+    trace_directory = lttng.lttng_init(
+        session_name=session_name,
+        base_path=base_path,
+        #append_trace=append_trace,
+        ros_events=ros_events,
+        kernel_events=kernel_events,
+        context_fields=context_fields,
+        live=live,
+        timer_interval=timer_interval
+
+    )
+    if trace_directory is None:
+        return False
+    # Simple sanity check
+    assert trace_directory == full_session_path
+    return True
 
 
 def fini(

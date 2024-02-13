@@ -76,7 +76,12 @@ def _add_arguments_configure(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(
         '-a', '--append-trace', dest='append_trace', action='store_true',
         help='append to trace if it already exists, otherwise error out (default: %(default)s)')
-
+    parser.add_argument(
+        '--live', dest='live', action='store_true',
+        help='perform live tracing')
+    parser.add_argument(
+        '-t', '--timer-interval', dest='timer_interval', action='store_true',
+        help='display lists of enabled events and context names (default: %(default)s)')
 
 def _add_arguments_default_session_name(parser: argparse.ArgumentParser) -> None:
     parser.add_argument(

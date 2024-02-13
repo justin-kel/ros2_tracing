@@ -23,6 +23,7 @@ from packaging.version import Version
 
 try:
     from . import lttng_impl as _lttng
+    
 except ImportError:
     # Fall back on stub functions so that this still passes linter checks
     # This will happen if lttngpy isn't found, in which case importing lttng_impl will fail
